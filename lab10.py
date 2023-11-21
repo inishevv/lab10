@@ -1,5 +1,6 @@
 import random #для подключения библиотек
 import logging
+from datetime import datetime
 
 #для добавления записей в log-файл
 logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="a")
@@ -20,6 +21,7 @@ def chislo(ch):
             logging.warning('Введено не число, попробуйте снова')
 
 #для вводных данных
+logging.warning(datetime.now()) #для фиксирования старта программы
 print('количество попыток пользователя: ')
 logging.warning('количество попыток пользователя: ')
 k = chislo('')
@@ -50,7 +52,9 @@ for i in range(k):
         elif a == number:
             print("вы выиграли!")
             logging.warning('вы выиграли!')
+            logging.warning(datetime.now())
             flag += 1
 if flag == 0:
     print('попытки закончились')
     logging.warning('попытки закончились')
+    logging.warning(datetime.now())
