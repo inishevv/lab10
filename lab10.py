@@ -3,15 +3,25 @@ import logging
 
 logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="a")
 
-k = input()
-n = input()
-number = random.randint(0,n)
+print('количество попыток пользователя: ')
+k = int(input())
+print('максимальное число, которое может загадать компьютер: ')
+n = int(input())
+flag = 0
+
+number = random.randint(1,n)
+
 for i in range(k):
+    print('введите число')
     a = int(input())
     logging.warning(a)
     if a < number:
-        print("введенное число больше")
+        print("загаданное число больше")
     elif a > number:
-        print("введенное число меньше")
+        print("загаданное число меньше")
     elif a == number:
         print("вы выиграли!")
+        logging.warning('вы выиграли!')
+        flag += 1
+if flag == 0:
+    print('попытки закончились')
