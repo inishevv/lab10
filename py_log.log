@@ -100,3 +100,13 @@ WARNING:root:4
 WARNING:root:загаданное число меньше
 WARNING:root:2
 WARNING:root:вы выиграли!
+WARNING:root:количество попыток пользователя: 
+WARNING:root:3
+WARNING:root:максимальное число, которое может загадать компьютер: 
+WARNING:root:4
+WARNING:root:загаданное число:
+WARNING:root:1
+WARNING:root:2
+WARNING:root:загаданное число меньше
+WARNING:root:1
+WARNING:root:вы выиграли!

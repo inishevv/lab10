@@ -1,8 +1,10 @@
-import random
+import random #для подключения библиотек
 import logging
 
+#для добавления записей в log-файл
 logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="a")
 
+#для проверки на число(больше 1 по условию задачи)
 def chislo(ch):
     while True:
         user_ch = input(ch)
@@ -17,6 +19,7 @@ def chislo(ch):
             print('Введено не число, попробуйте снова')
             logging.warning('Введено не число, попробуйте снова')
 
+#для вводных данных
 print('количество попыток пользователя: ')
 logging.warning('количество попыток пользователя: ')
 k = chislo('')
@@ -27,10 +30,12 @@ n = chislo('')
 logging.warning(n)
 flag = 0
 
+#для формирования рандомного значения, которое нужно отгадать
 number = random.randint(1,n)
 logging.warning('загаданное число:')
 logging.warning(number)
 
+#для отгадывания числа
 for i in range(k):
     if flag == 0:
         print('введите число')
